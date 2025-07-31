@@ -174,7 +174,7 @@ public:
 
 	// Using this function reduces the number of temporary variables needed to compute A * B.T
 	template<size_t P>
-	Matrix<Type, M, M> multiplyByTranspose(const Matrix<Type, P, N> &other) const
+	Matrix<Type, M, P> multiplyByTranspose(const Matrix<Type, P, N> &other) const
 	{
 		Matrix<Type, M, P> res;
 		const Matrix<Type, M, N> &self = *this;
